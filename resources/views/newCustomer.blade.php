@@ -11,10 +11,10 @@
         <div class="modal-body">
           <form  action="newCustomer" method="post" id="frmCustomer">
           <div class="row">
-
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="col-lg-4 col-sm-4">
             <div class="form-group">
-              <input type="text" name="username" id="name" placeholder="name"  class="form-control">
+              <input type="text" name="name" id="name" placeholder="name"  class="form-control">
             </div>
             </div>
 
@@ -40,7 +40,7 @@
 
         </div>
         <div class="modal-footer">
-        <input type="submit" value="Save" id="save" class="btn btn-primary">
+        <input type="button" value="Save" id="save" class="btn btn-primary" onclick="createCostumer()">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
         </form>
