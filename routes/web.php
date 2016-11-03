@@ -11,5 +11,11 @@
 |
 */
 
-Route::get('/', 'CustomerController@index');
-Route::post('/newCustomer', 'CustomerController@newCustomer');
+// Route::get('/', 'CustomerController@index');
+// Route::post('/newCustomer', 'CustomerController@newCustomer');
+
+Route::get('/', function(){
+	return view('welcome');
+});
+
+Route::resource('home', 'CustomerController');
